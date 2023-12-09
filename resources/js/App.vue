@@ -81,7 +81,7 @@ const sliderRange = reactive({
 });
 const rules = reactive({
     name: [
-        { min: 3, max: 255, message: 'Length should be 3 to 255', trigger: 'blur' },
+        { min: 2, max: 255, message: 'Length should be 2 to 255', trigger: 'blur' },
     ],
     price: [{}]
 })

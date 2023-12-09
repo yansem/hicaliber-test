@@ -12,3 +12,6 @@ Example of deploying a test task:
 9. open new terminal window and run the command "npm run dev"
 10. application will be accessible in web browser at http://localhost:8000
 11. click the search button to search
+
+Additionally, validation on the client and server has been added.
+Added tests that can be run with the "php artisan test" command.

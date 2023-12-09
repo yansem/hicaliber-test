@@ -14,7 +14,7 @@ class SearchRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['nullable', 'string', 'min:4', 'max:255'],
+            'name' => ['nullable', 'string', 'min:2', 'max:255'],
             'price' => ['nullable', 'array'],
             'price.*' => ['integer', 'min:0', 'max:4294967295'],
             'bedrooms' => ['nullable', 'integer', 'max:255'],
