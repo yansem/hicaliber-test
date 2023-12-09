@@ -14,12 +14,21 @@ class SearchRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => ['nullable', 'string', 'max:255'],
-            'price' => ['nullable', 'array', 'max:4294967295'],
+            'name' => ['nullable', 'string', 'min:4', 'max:255'],
+            'price' => ['nullable', 'array'],
+            'price.*' => ['integer', 'min:0', 'max:4294967295'],
             'bedrooms' => ['nullable', 'integer', 'max:255'],
             'bathrooms' => ['nullable', 'integer', 'max:255'],
             'storeys' => ['nullable', 'integer', 'max:255'],
             'garages' => ['nullable', 'integer', 'max:255']
+        ];
+    }
+
+    public function attributes()
+    {
+        return [
+            'price.0' => 'min',
+            'price.1' => 'max',
         ];
     }
 }
