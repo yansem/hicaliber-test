@@ -15,6 +15,7 @@
                             :max="sliderRangeMax"
                             :show-input="true"
                             @change="handleSliderChange"
+                            :format-tooltip="formatTooltip"
                         />
                         <el-input-number :min="sliderRangeMin" :max="sliderRangeMax" v-model="sliderRange.min" @change="handleInputChange"/>
                         <el-input-number v-model="sliderRange.max" @change="handleInputChange"/>
@@ -144,4 +145,8 @@ const formatValidationErrors = (validationErrors) => {
     }
     return formattedErrors;
 };
+
+const formatTooltip = (value) => {
+    return `$${value}`;
+}
 </script>
