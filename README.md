@@ -11,3 +11,4 @@ Example of deploying a test task:
 8. run the command "php artisan serve"
 9. open new terminal window and run the command "npm run dev"
 10. application will be accessible in web browser at http://localhost:8000
+11. click the search button to search
